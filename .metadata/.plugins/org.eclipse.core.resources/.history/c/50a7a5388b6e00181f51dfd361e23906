@@ -1,0 +1,8 @@
+package br.com.arearestrita.daoGenericos;
+
+import br.com.arearestrita.entity.Produto;
+import br.com.dashboardspringmvc.dao.DaoImplementacao;
+
+public class ProdutoDAOImplementacao extends DaoImplementacao<Produto, Integer> implements ProdutoDAO {
+
+}

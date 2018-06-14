@@ -1,0 +1,7 @@
+package br.com.arearestrita.daoGenericos;
+import br.com.arearestrita.entity.Produto;
+import br.com.dashboardspringmvc.dao.Dao;
+
+public interface ProdutoDAO extends Dao<Produto, Integer> {
+
+}

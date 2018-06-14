@@ -1,0 +1,68 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+						http://www.springframework.org/schema/tx
+       				    http://www.springframework.org/schema/tx/spring-tx.xsd
+						http://www.springframework.org/schema/mvc
+    					http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        				http://www.springframework.org/schema/context
+        				http://www.springframework.org/schema/context/spring-context-4.0.xsd
+						">
+
+	<context:property-placeholder location="classpath:dataBase.properties" />
+
+	<context:annotation-config />
+	<tx:annotation-driven transaction-manager="txManager" />
+	<bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="persistenceUnitName" value="DashboardSpringMVCPU" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="generateDdl" value="true" />
+				<property name="showSql" value="true" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="username" value="${javax.persistence.jdbc.user}" />
+		<property name="password" value="${javax.persistence.jdbc.password}" />
+		<property name="driverClassName" value="${javax.persistence.jdbc.driver}" />
+		<property name="url" value="${javax.persistence.jdbc.url}" />
+	</bean>
+
+	<context:component-scan base-package="br.com.dashboardspringmvc.controller" />
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+		<property name="prefix">
+			<value>/WEB-INF/views/</value>
+		</property>
+
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+	<mvc:resources mapping="/assets/**" cache-period="31556926"
+		location="/assets/" />
+
+	<mvc:resources mapping="/WEB-INF/tags/**" location="/WEB-INF/tags/" />
+	<mvc:annotation-driven />
+
+	<mvc:interceptors>
+		<bean class="br.com.dashboardspringmvc.controller.AutorizadorInterceptor" />
+	</mvc:interceptors>
+
+
+</beans>

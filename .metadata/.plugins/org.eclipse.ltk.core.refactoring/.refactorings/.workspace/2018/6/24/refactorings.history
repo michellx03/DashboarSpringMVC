@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AreaAdministrativa&apos; to &apos;DashboardSpringMVC&apos;" description="Rename resource &apos;AreaAdministrativa&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/AreaAdministrativa" name="DashboardSpringMVC" stamp="1528840145214" updateReferences="true"/>
+</session>
