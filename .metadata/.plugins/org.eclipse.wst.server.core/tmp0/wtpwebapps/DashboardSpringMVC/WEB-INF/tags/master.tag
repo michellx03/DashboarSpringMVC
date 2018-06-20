@@ -184,13 +184,21 @@ License: You must have a valid license purchased only from themeforest(the above
                                    
                                 </ul>
                             </li>
-                             <li id="consulta_produto" class="nav-item start">
-                                        <a href="/DashboardSpringMVC/Produto/Consulta" class="nav-link ">
+                             <li id="" class="nav-item start">
+                                        <a href="" class="nav-link ">
                                             <i class="icon-bar-chart"></i>
-                                            <span class="title">Produto</span>
+                                            <span class="title">Relatorios</span>
                                             <span class="selected"></span>
                                         </a>
                                     </li>
+                            <li id="produtoli" class="nav-item start">
+                                        <a href="/DashboardSpringMVC/Produto/Consulta" class="nav-link ">
+                                            <i class="icon-bar-chart"></i>
+                                            <span class="title">Produtos</span>
+                                            <span class="selected"></span>
+                                        </a>
+                                    </li>        
+                                    
                             <li id="usuarioli" class="nav-item start">
                                 <a href="javascript:;" class="nav-link nav-toggle">
                                     <i class="icon-user"></i>

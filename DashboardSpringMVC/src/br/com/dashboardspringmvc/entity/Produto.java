@@ -1,0 +1,61 @@
+package br.com.dashboardspringmvc.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="produto", schema="sistema")
+public class Produto implements Serializable {
+
+	@Id
+	@Column(name="prod_id")
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Integer produtoId;
+	
+	@Column(name="prod_descricao")
+	private String descricao;
+	
+	@Column(name="prod_name")
+	private String name;
+	
+	@Column(name="prod_foto", length=50000)
+	private String foto;
+
+	public Integer getProdutoId() {
+		return produtoId;
+	}
+
+	public void setProdutoId(Integer produtoId) {
+		this.produtoId = produtoId;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+}

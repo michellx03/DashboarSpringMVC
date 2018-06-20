@@ -1,8 +1,0 @@
-package br.com.dashboardspringmvc.daoGenericos;
-
-import br.com.arearestrita.entity.Usuario;
-import br.com.dashboardspringmvc.dao.*;
-
-public interface UsuarioDao extends Dao<Usuario, Integer> {
-
-}

@@ -20,3 +20,13 @@ jun 13, 2018 20:40:32.69 ATTENTION: default value of option force_s3tc_enable ov
 jun 13, 2018 20:40:32.91 Foi criada uma nova janela em uma sessão existente do navegador.
 jun 13, 2018 20:54:33.41 ATTENTION: default value of option force_s3tc_enable overridden by environment.
 jun 13, 2018 20:54:33.99 Foi criada uma nova janela em uma sessão existente do navegador.
+
+jun 18, 2018 21:34:28.25 NEW SESSION
+jun 18, 2018 21:34:28.25 ATTENTION: default value of option force_s3tc_enable overridden by environment.
+jun 18, 2018 21:34:36.35 [4264:4264:0618/213434.410124:ERROR:in_progress_cache_impl.cc(188)] Cache is not initialized, cannot RetrieveEntry.
+jun 18, 2018 22:47:13.76 [4264:5865:0618/224713.546677:ERROR:simple_index_file.cc(300)] Could not create a directory to hold the index file
+
+jun 19, 2018 20:17:38.72 NEW SESSION
+jun 19, 2018 20:17:38.72 ATTENTION: default value of option force_s3tc_enable overridden by environment.
+jun 19, 2018 20:17:38.81 Foi criada uma nova janela em uma sessão existente do navegador.
+jun 19, 2018 20:29:25.27 Foi criada uma nova janela em uma sessão existente do navegador.

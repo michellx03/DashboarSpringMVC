@@ -1,0 +1,5 @@
+package br.com.dashboardspringmvc.controller;
+
+public class ProdutoController {
+
+}
